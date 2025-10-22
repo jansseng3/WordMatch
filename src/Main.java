@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        WordMatch w = new WordMatch("concatenation");
+        System.out.println(w.scoreGuess("ten"));
+        System.out.println(w.scoreGuess("nation"));
+        System.out.println(w.findBetterGuess("ten", "nation"));
+        System.out.println(w.scoreGuess("con"));
+        System.out.println(w.scoreGuess("cat"));
+        System.out.println(w.findBetterGuess("con", "cat"));
     }
 }
